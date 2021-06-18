@@ -19,7 +19,7 @@ app.use(routes);
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/reactreadinglist',
   {
-    useNewUrlParser: true,
+    writeConcern: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false
